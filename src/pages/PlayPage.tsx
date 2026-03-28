@@ -6,6 +6,8 @@ import NotFound from '../components/NotFound';
 export default function PlayPage() {
   const { slug } = useParams<{ slug: string }>();
   const entry = slug ? getGameBySlug(slug) : undefined;
+  console.log('slug:', slug);
+  console.log('entry:', entry);
 
   if (!entry) {
     return <NotFound />;
