@@ -1,13 +1,15 @@
 import type { GameMeta } from '../types/game';
 import type { ComponentType } from 'react';
 import type { GameProps } from '../types/game';
+import templateMeta from '../games/template/meta';
+import TemplateGame from '../games/template';
 
 // --- Import metas ---
-import mathBlitzMeta from '../games/template/meta';
+
 import mathDebrisMeta from '../games/math-debris/meta';
 
 // --- Import components ---
-import MathBlitz from '../games/template/index';
+
 import MathDebris from '../games/math-debris/index';
 
 // --- Registry entry ---
@@ -17,14 +19,18 @@ export interface GameEntry {
 }
 
 const registry: GameEntry[] = [
+  
   {
-    meta: mathBlitzMeta,
-    component: MathBlitz,
-  },
-    {
     meta: mathDebrisMeta,
     component: MathDebris,
   },
+
+  {
+    meta: templateMeta,
+    component: TemplateGame,
+  },
+
+
   // Add more games here following the same pattern:
   // { meta: myGameMeta, component: MyGame }
 ];
