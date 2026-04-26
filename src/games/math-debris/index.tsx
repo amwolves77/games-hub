@@ -515,7 +515,7 @@ export default function Game({
               <div style={{ fontSize: '1.3rem', fontWeight: '700', color: timeLeft < 10 ? '#ff0055' : '#fff' }}>
                 {Math.floor(timeLeft / 60)}:{String(timeLeft % 60).padStart(2, '0')}
               </div>
-              <button onClick={onExit} style={{ background: 'none', border: 'none', color: '#ff0055', fontSize: '0.7rem', cursor: 'pointer', padding: 0, marginTop: '5px' }}>[ ABORT ]</button>
+              <button onClick={() => window.location.reload()} style={{ background: 'none', border: 'none', color: '#ff0055', fontSize: '0.7rem', cursor: 'pointer', padding: 0, marginTop: '5px' }}>[ RESTART ]</button>
             </div>
             
             <div style={styles.targetCard}>
